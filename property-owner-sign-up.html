@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Property Owner Sign-Up - Veteran-BNB</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .signup-container {
+      max-width: 600px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .signup-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .signup-container label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .signup-container input, .signup-container textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .signup-container button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #004080;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .signup-container button:hover {
+      background-color: #003366;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Veteran BNB Logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="property-owner-sign-up.html" class="active">Property Owner Sign Up</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="signup-container">
+      <h1>List Your Property with Veteran-BNB</h1>
+      <p>If you're a veteran or veteran supporter looking to offer your vacation rental to fellow service members and their families, fill out the form below to join our community.</p>
+
+      <form action="#" method="post">
+        <label for="ownerName">Full Name:</label>
+        <input type="text" id="ownerName" name="ownerName" required>
+
+        <label for="propertyName">Property Name:</label>
+        <input type="text" id="propertyName" name="propertyName" required>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="description">Property Description:</label>
+        <textarea id="description" name="description" rows="5" required></textarea>
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>2540 Calabria Ave, Davenport, FL 33897</p>
+    <p>Email: <a href="mailto:veteranbnb@outlook.com">veteranbnb@outlook.com</a></p>
+    <p>Phone: (703) 859-3706</p>
+    <p>&copy; 2024 Veteran-BNB. All rights reserved.</p>
+    <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a>
+  </footer>
+</body>
+</html>
