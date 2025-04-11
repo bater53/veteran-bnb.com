@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery - Veteran-BNB</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      padding: 20px;
+    }
+
+    .gallery-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-container h2 {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Veteran BNB Logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="property-owner-sign-up.html">Property Owner Sign Up</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 style="text-align:center;">Explore Our Property & Resort</h1>
+    <div class="gallery-container">
+      <img src="images/living-room.jpg" alt="Spacious living room with flat-screen TV" />
+      <img src="images/lazy-river.jpg" alt="Resort lazy river with floats and palm trees" />
+      <img src="images/master-bedroom.jpg" alt="Master bedroom with king-sized bed" />
+      <img src="images/kitchen.jpg" alt="Fully stocked kitchen with bar counter" />
+      <img src="images/arcade.jpg" alt="Fun arcade games for families and kids" />
+      <img src="images/pool-area.jpg" alt="Resort pool area with loungers and umbrellas" />
+    </div>
+  </main>
+
+  <footer>
+    <p>2540 Calabria Ave, Davenport, FL 33897</p>
+    <p>Email: <a href="mailto:veteranbnb@outlook.com">veteranbnb@outlook.com</a></p>
+    <p>Phone: (703) 859-3706</p>
+    <p>&copy; 2024 Veteran-BNB. All rights reserved.</p>
+    <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a>
+  </footer>
+</body>
+</html>
