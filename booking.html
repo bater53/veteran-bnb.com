@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Your Stay - Veteran-BNB</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Veteran BNB Logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="booking.html" class="active">Booking</a></li>
+        <li><a href="property-owner-sign-up.html">Property Owner Sign Up</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Book Your Stay at Veteran-BNB</h1>
+
+    <form id="bookingForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="checkin">Check-In Date:</label>
+      <input type="date" id="checkin" name="checkin" required>
+
+      <label for="checkout">Check-Out Date:</label>
+      <input type="date" id="checkout" name="checkout" required>
+
+      <label for="guests">Number of Guests:</label>
+      <input type="number" id="guests" name="guests" min="1" max="8" required>
+
+      <label for="dogs">Number of Dogs:</label>
+      <input type="number" id="dogs" name="dogs" min="0" max="2">
+
+      <label for="notes">Special Requests:</label>
+      <textarea id="notes" name="notes" rows="4"></textarea>
+
+      <div class="summary-box">
+        <p><strong>Nightly Rate:</strong> $175</p>
+        <p><strong>Resort Fee:</strong> $20/night</p>
+        <p><strong>Total (Estimate):</strong> <span id="totalCost">$0.00</span></p>
+      </div>
+
+      <button type="button" onclick="calculateTotal()">Calculate Total</button>
+      <br><br>
+      <a href="https://buy.stripe.com/test_checkout_link_here" class="btn" target="_blank">Proceed to Payment</a>
+    </form>
+  </main>
+
+  <footer>
+    <p>2540 Calabria Ave, Davenport, FL 33897</p>
+    <p>Email: <a href="mailto:veteranbnb@outlook.com">veteranbnb@outlook.com</a></p>
+    <p>Phone: (703) 859-3706</p>
+    <p>&copy; 2024 Veteran-BNB. All rights reserved.</p>
+    <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a>
+  </footer>
+
+  <script>
+    function calculateTotal() {
+      const checkin = new Date(document.getElementById('checkin').value);
+      const checkout = new Date(document.getElementById('checkout').value);
+      const nights = Math.ceil((checkout - checkin) / (1000 * 60 * 60 * 24));
+
+      if (nights > 0) {
+        const nightlyRate = 175;
+        const resortFee = 20;
+        const total = (nightlyRate + resortFee) * nights;
+        document.getElementById('totalCost').textContent = '$' + total.toFixed(2);
+      } else {
+        document.getElementById('totalCost').textContent = 'Invalid dates';
+      }
+    }
+  </script>
+</body>
+</html>
